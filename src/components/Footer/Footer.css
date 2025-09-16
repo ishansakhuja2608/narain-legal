@@ -1,0 +1,246 @@
+.footer {
+  background: linear-gradient(135deg, 
+    var(--color-slate-900, #133443) 0%,
+    var(--color-charcoal-800, #262828) 100%);
+  color: white;
+  padding: 80px 0 0 0;
+}
+
+.footer-content {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-section h4,
+.footer-section h5,
+.footer-section h6 {
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-logo i {
+  font-size: 2rem;
+  color: var(--color-teal-400, #2da6b2);
+}
+
+.footer-logo h4 {
+  margin: 0;
+  font-weight: 700;
+}
+
+.footer-description {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: var(--color-teal-400, #2da6b2);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.footer-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: white !important;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--color-teal-400, #2da6b2);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-links a:hover {
+  color: var(--color-teal-400, #2da6b2);
+  padding-left: 10px;
+}
+
+.contact-info {
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-item i {
+  color: var(--color-teal-400, #2da6b2);
+  font-size: 1.125rem;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.contact-item .clickable {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.contact-item .clickable:hover {
+  color: var(--color-teal-400, #2da6b2);
+}
+
+.newsletter-section {
+  margin-top: 2rem;
+}
+
+.newsletter-section h6 {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.newsletter-section p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 0.875rem;
+}
+
+.newsletter-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.newsletter-input:focus {
+  outline: none;
+  border-color: var(--color-teal-400, #2da6b2);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.newsletter-btn {
+  padding: 0.75rem 1rem;
+  background: linear-gradient(45deg, 
+    var(--color-teal-500, #21808d) 0%, 
+    var(--color-teal-400, #2da6b2) 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsletter-btn:hover {
+  background: linear-gradient(45deg, 
+    var(--color-teal-600, #1d7480) 0%, 
+    var(--color-teal-500, #21808d) 100%);
+  transform: translateY(-2px);
+}
+
+.footer-bottom {
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+.copyright {
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end;
+}
+
+.footer-bottom-links a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+  color: var(--color-teal-400, #2da6b2);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 0 0 0;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .footer-bottom-links {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .contact-item {
+    text-align: left;
+  }
+}

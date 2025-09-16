@@ -1,0 +1,50 @@
+.rooms-section {
+  background: linear-gradient(135deg, 
+    var(--color-cream-100, #fffffd) 0%,
+    var(--color-gray-200, #f5f5f5) 100%);
+  padding: 100px 0;
+  position: relative;
+}
+
+.rooms-bottom-section {
+  background: linear-gradient(135deg, 
+    var(--color-slate-900, #133443) 0%, 
+    var(--color-charcoal-800, #262828) 100%);
+  color: white;
+  padding: 3rem;
+  border-radius: 20px;
+  margin-top: 4rem;
+}
+
+.bottom-content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.bottom-content p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .rooms-section {
+    padding: 60px 0;
+  }
+
+  .rooms-bottom-section {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .bottom-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .bottom-content p {
+    font-size: 1rem;
+  }
+}

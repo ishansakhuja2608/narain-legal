@@ -1,0 +1,140 @@
+.custom-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  outline: none;
+  font-family: inherit;
+}
+
+.custom-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+  z-index: 1;
+}
+
+.custom-btn:active .btn-ripple {
+  width: 300px;
+  height: 300px;
+}
+
+/* Variants */
+.btn-primary {
+  background: linear-gradient(45deg, 
+    var(--color-teal-500, #21808d) 0%, 
+    var(--color-teal-400, #2da6b2) 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(33, 128, 141, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(45deg, 
+    var(--color-teal-600, #1d7480) 0%, 
+    var(--color-teal-500, #21808d) 100%);
+  box-shadow: 0 6px 20px rgba(33, 128, 141, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: linear-gradient(45deg, 
+    var(--color-slate-500, #626c71) 0%, 
+    var(--color-charcoal-700, #1f2121) 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(98, 108, 113, 0.3);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(45deg, 
+    var(--color-charcoal-700, #1f2121) 0%, 
+    var(--color-charcoal-800, #262828) 100%);
+  transform: translateY(-2px);
+}
+
+.btn-outline-light {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+  background: transparent;
+  border: 2px solid var(--color-teal-400, #2da6b2);
+  color: var(--color-teal-400, #2da6b2);
+}
+
+.btn-outline-primary:hover {
+  background: var(--color-teal-400, #2da6b2);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Sizes */
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.btn-md {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.btn-xl {
+  padding: 1.25rem 2.5rem;
+  font-size: 1.25rem;
+}
+
+/* Focus states */
+.custom-btn:focus {
+  box-shadow: 0 0 0 3px rgba(33, 128, 141, 0.25);
+}
+
+@media (max-width: 768px) {
+  .btn-lg {
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
+  }
+
+  .btn-xl {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+  }
+}

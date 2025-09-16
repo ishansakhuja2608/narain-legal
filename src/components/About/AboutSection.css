@@ -1,0 +1,244 @@
+.about-section {
+  background: linear-gradient(135deg, 
+    var(--color-cream-50, #fcfcf9) 0%,
+    var(--color-cream-100, #fffffd) 100%);
+  padding: 100px 0;
+}
+
+.section-header {
+  margin-bottom: 2rem;
+}
+
+.section-subtitle {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(45deg, 
+    var(--color-teal-400, #2da6b2), 
+    var(--color-teal-300, #32b8c6));
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-slate-900, #133443);
+  margin-bottom: 1.5rem;
+}
+
+.section-title .highlight {
+  color: var(--color-teal-500, #21808d);
+  background: linear-gradient(45deg, 
+    var(--color-teal-500, #21808d), 
+    var(--color-teal-400, #2da6b2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-description {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--color-slate-500, #626c71);
+}
+
+.about-image {
+  position: relative;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease;
+}
+
+.about-image.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.image-wrapper img {
+  transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(47, 40, 79, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.image-wrapper:hover .image-overlay {
+  opacity: 1;
+}
+
+.overlay-content {
+  text-align: center;
+  color: white;
+}
+
+.play-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.overlay-content:hover .play-icon {
+  transform: scale(1.1);
+}
+
+.floating-stats {
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 1px solid rgba(33, 128, 141, 0.1);
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-teal-500, #21808d);
+  margin-bottom: 0.5rem;
+}
+
+.stat-text {
+  font-size: 0.875rem;
+  color: var(--color-slate-500, #626c71);
+  font-weight: 600;
+}
+
+.about-content {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease 0.2s;
+}
+
+.about-content.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.vision-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, 
+    rgba(33, 128, 141, 0.05) 0%, 
+    rgba(45, 166, 178, 0.05) 100%);
+  border-radius: 12px;
+  border: 1px solid rgba(33, 128, 141, 0.1);
+}
+
+.vision-icon {
+  font-size: 2rem;
+  color: var(--color-teal-500, #21808d);
+  margin-top: 0.25rem;
+}
+
+.vision-content h5 {
+  color: var(--color-slate-900, #133443);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.vision-content p {
+  color: var(--color-slate-500, #626c71);
+  line-height: 1.6;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+  color: var(--color-teal-500, #21808d);
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.feature-content h6 {
+  color: var(--color-slate-900, #133443);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.feature-content p {
+  color: var(--color-slate-500, #626c71);
+  font-size: 0.875rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.about-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.25rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+
+  .floating-stats {
+    position: static;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-actions {
+    justify-content: center;
+  }
+
+  .feature-item {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vision-card {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,126 @@
+.stats-section {
+  background: linear-gradient(135deg, 
+    var(--color-slate-900, #133443) 0%, 
+    var(--color-charcoal-800, #262828) 50%,
+    var(--color-brown-600, #5e5240) 100%);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://pplx-res.cloudinary.com/image/upload/v1726317756/user_uploads/cphdqfjkd/image-45.jpg') center/cover;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.stats-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: white;
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  height: 100%;
+}
+
+.stat-card.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stat-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.stat-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, 
+    var(--color-teal-400, #2da6b2) 0%, 
+    var(--color-teal-300, #32b8c6) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem auto;
+  transition: all 0.4s ease;
+}
+
+.stat-icon i {
+  font-size: 2rem;
+  color: white;
+}
+
+.stat-card:hover .stat-icon {
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 10px 30px rgba(45, 166, 178, 0.3);
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, 
+    var(--color-teal-300, #32b8c6), 
+    white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-label {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stat-description {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .stats-section {
+    padding: 60px 0;
+  }
+
+  .stat-card {
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .stat-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .stat-icon i {
+    font-size: 1.5rem;
+  }
+}

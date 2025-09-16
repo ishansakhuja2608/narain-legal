@@ -1,0 +1,92 @@
+.navbar {
+  transition: all 0.3s ease;
+  padding: 1rem 0;
+  background: rgba(47, 40, 79, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.navbar.scrolled {
+  padding: 0.5rem 0;
+  background: rgba(47, 40, 79, 0.98);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
+
+.brand-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand-icon {
+  font-size: 2rem;
+  color: var(--color-teal-400, #45a6b2);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.brand-slogan {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-style: italic;
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--color-teal-400, #45a6b2) !important;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--color-teal-400, #45a6b2);
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+@media (max-width: 991px) {
+  .brand-name {
+    font-size: 1rem;
+  }
+
+  .brand-slogan {
+    font-size: 0.7rem;
+  }
+
+  .navbar-collapse {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
